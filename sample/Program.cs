@@ -15,7 +15,7 @@
       var usedVar = "";
       var unusedVar = ""; // raise unused vars
 
-      Console.WriteLine("Hello, World!");
+      Console.WriteLine("Hello, World!\n\nits me again !");
       var some = new SomeClass() { Id = 1, Name = "sample" };
 
       // throw too many parameters in a function
