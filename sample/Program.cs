@@ -24,7 +24,14 @@
 
     private static void DoSomething(int v1, bool v2, string[] strings, SomeOption none, DateTime now, int v3, SomeClass someClass, string someVar)
     {
-      throw new NotImplementedException();
+      try
+      {
+        Console.WriteLine("We really dont want to throw exceptions, but for case in sample we will!");
+      }
+      catch (Exception)
+      {
+        throw new NotImplementedException();
+      }
     }
   }
 }
