@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: Docker Image CI v 1.0
 
 on:
   workflow_dispatch:
