@@ -10,12 +10,12 @@ on:
 #    - cron: '43 7 * * *'
   workflow_dispatch:
     branches: [ "main" ]
-#  push:
-#    branches: [ "main" ]
-#    # Publish semver tags as releases.
+  push:
+    branches: [ "main" ]
+   # Publish semver tags as releases.
 #    tags: [ 'v*.*.*' ]
-#  pull_request:
-#    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 env:
   # Use docker.io for Docker Hub if empty
@@ -97,4 +97,5 @@ jobs:
           DIGEST: ${{ steps.build-and-push.outputs.digest }}
         # This step uses the identity token to provision an ephemeral certificate
         # against the sigstore community Fulcio instance.
-        run: echo "${TAGS}" | xargs -I {} cosign sign --yes {}@${DIGEST}
+        run: echo "This is the End"
+        #"${TAGS}" | xargs -I {} cosign sign --yes {}@${DIGEST}
